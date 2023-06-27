@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "This is the backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "HARSH TRIPATHI",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.2.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.4",
+    "mongoose-paginate-v2": "^1.7.1",
+    "node-fetch": "^3.3.0",
+    "nodemon": "^2.0.20",
+    "referral-code-generator": "^1.0.8"
+  }
+}
