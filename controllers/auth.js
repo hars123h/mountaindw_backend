@@ -50,7 +50,7 @@ exports.register = async (req, res) => {
           pwd,
           wpwd,
           time: new Date(),
-          balance: 110,
+          balance: 10,
           recharge_amount: 0,
           withdrawal_sum: 0,
           earning: 0,
@@ -312,7 +312,7 @@ exports.update_recharge = async (req, res) => {
         // Level 1 recharge commission
         await User.updateOne({ _id: data.parent_id }, {
           $inc: {
-            balance: Number((28 / 100) * (Number(data.recharge_value))),
+            balance: Number((10 / 100) * (Number(data.recharge_value))),
             directRecharge: Number(data.recharge_value)
           },
           $addToSet: {
@@ -332,7 +332,7 @@ exports.update_recharge = async (req, res) => {
         // Level 3 recharge commission
         await User.updateOne({ _id: data.great_grand_parent_id }, {
           $inc: {
-            balance: Number((1 / 100) * (Number(data.recharge_value))),
+            balance: Number((2 / 100) * (Number(data.recharge_value))),
             in_indirectRecharge: Number(data.recharge_value)
           },
           $addToSet: {
